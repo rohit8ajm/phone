@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+repositories{
+    jcenter()
+}
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+    packagingOptions {
+        pickFirst 'META-INF/ASL2.0'
+        pickFirst 'META-INF/LICENSE'
+        pickFirst 'META-INF/NOTICE'
+    }
+    defaultConfig {
+        applicationId "com.example.ebullient.phone"
+        minSdkVersion 11
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile group: 'com.ibm.mobile.foundation',
+            name: 'ibmmobilefirstplatformfoundation',
+            version: '7.1.0.0',
+            ext: 'aar',
+            transitive: true
+}

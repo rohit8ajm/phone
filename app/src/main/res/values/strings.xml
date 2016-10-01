@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">Contact Manager</string>
+    <string name="action_settings">Rohit</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_search">action_search</string>
+    <string name="search_global_description">Search</string>
+    <string name="search_hint">Search</string>
+
+</resources>
